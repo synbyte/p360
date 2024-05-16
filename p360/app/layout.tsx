@@ -1,6 +1,9 @@
-import { GeistSans } from "geist/font/sans";
+import { Poppins } from 'next/font/google';
 import "./globals.css";
+import NavBar from "@/components/NavBar";
+import AuthButton from '@/components/AuthButton';
 
+const poppins = Poppins({subsets:['latin'], weight:'400'})
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : "http://localhost:3000";
@@ -17,9 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={GeistSans.className}>
+    <html lang="en" className={poppins.className}>
       <body className="bg-background text-foreground">
-        <main className="min-h-screen flex flex-col items-center">
+        <main className="flex flex-col items-center min-h-screen">
+          <NavBar auth={<AuthButton/>}/>
           {children}
         </main>
       </body>
