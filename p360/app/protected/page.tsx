@@ -1,10 +1,10 @@
 import DeployButton from "@/components/DeployButton";
-import AuthButton from "@/components/AuthButton";
+import AuthButton from "@/components/NavBar/AuthButton";
 import { createClient } from "@/utils/supabase/server";
 import FetchDataSteps from "@/components/tutorial/FetchDataSteps";
 import Header from "@/components/Header";
 import { redirect } from "next/navigation";
-import Link from 'next/link'
+import NavBar from "@/components/NavBar/NavBar";
 
 export default async function ProtectedPage() {
   const supabase = createClient();
@@ -19,17 +19,7 @@ export default async function ProtectedPage() {
 
   return (
     <div className="flex flex-col flex-1 gap-20 items-center w-full">
-      <div className="w-full">
-        
-        <nav className="flex justify-center w-full h-16 border-b border-b-foreground/10">
-          <div className="flex justify-between items-center p-3 w-full max-w-4xl text-sm">
-            <div className='flex gap-2'>
-            <Link href='/notes'><button className="px-3 py-2 rounded border hover:bg-btn-background-hover">Notes</button></Link>
-            </div>
-            <AuthButton />
-          </div>
-        </nav>
-      </div>
+     
 
       <div className="flex flex-col flex-1 gap-20 px-3 max-w-4xl opacity-0 animate-in">
         <Header />

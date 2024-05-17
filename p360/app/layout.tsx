@@ -1,7 +1,7 @@
 import { Poppins } from 'next/font/google';
 import "./globals.css";
-import NavBar from "@/components/NavBar";
-import AuthButton from '@/components/AuthButton';
+import NavBar from "@/components/NavBar/NavBar";
+import AuthButton from '@/components/NavBar/AuthButton';
 
 const poppins = Poppins({subsets:['latin'], weight:'400'})
 const defaultUrl = process.env.VERCEL_URL
@@ -19,11 +19,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  
   return (
     <html lang="en" className={poppins.className}>
       <body className="bg-background text-foreground">
         <main className="flex flex-col items-center min-h-screen">
           <NavBar auth={<AuthButton/>}/>
+          
           {children}
         </main>
       </body>
