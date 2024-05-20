@@ -20,13 +20,13 @@ export default async function Page({ params }: { params: { id: string } }) {
     }
 
     return (
-        <div className='flex flex-col flex-1 items-center w-full'>
+        <div className='flex flex-col flex-1 items-center max-w-screen-md'>
             <p className="text-3xl font-bold">Client Details</p>
             <div className='w-full bg-gradient-to-r from-transparent to-transparent via-foreground/10 p-[1px] my-8'></div>
 
             {client && (
                 <div className='flex flex-row gap-4'>
-                    <div className='flex-col p-3 m-2 border'>
+                    <div className='flex-col p-3 m-2 rounded-lg border'>
                     <p className='text-xl font-bold heading'>{client.first_name} {client.last_name}</p>
                     <p className='text-sm'>{client.dob}</p>
                     <p className='text-sm'>{client.address}</p>
@@ -34,7 +34,7 @@ export default async function Page({ params }: { params: { id: string } }) {
                     <p className='text-sm'>{client.email}</p>
                    </div>
                    <Link href={`/clients/${params.id}/goals`}>
-                   <div className='flex-col p-3 m-2 border'>
+                   <div className='flex-col p-3 m-2 rounded-lg border'>
                    <p className='text-xl'>Goals:</p>
                     {goalsFetch?.map((goal) => (
                         <div>
