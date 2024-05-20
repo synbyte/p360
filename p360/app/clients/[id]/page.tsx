@@ -27,18 +27,22 @@ export default async function Page({ params }: { params: { id: string } }) {
             {client && (
                 <div className='flex flex-row gap-4'>
                     <div className='flex-col p-3 m-2 rounded-lg border'>
-                    <p className='text-xl font-bold heading'>{client.first_name} {client.last_name}</p>
-                    <p className='text-sm'>{client.dob}</p>
-                    <p className='text-sm'>{client.address}</p>
-                    <p className='text-sm'>{client.phone}</p>
-                    <p className='text-sm'>{client.email}</p>
+                    <p className='mb-4 text-xl  heading'>{client.first_name} {client.last_name}</p>
+                    <p className='text-sm underline'>D.o.b</p>
+                    <p className='mb-1'>{client.dob}</p>
+                    <p className='text-sm underline'>Address</p>
+                    <p className='mb-1'>{client.address}</p>
+                    <p className='text-sm underline'>Phone number</p>
+                    <p className='mb-1'>{client.phone}</p>
+                    <p className='text-sm underline'>Email</p>
+                    <p className=''>{client.email}</p>
                    </div>
                    <Link href={`/clients/${params.id}/goals`}>
                    <div className='flex-col p-3 m-2 rounded-lg border'>
-                   <p className='text-xl'>Goals:</p>
+                   <p className='mb-4 text-xl'>Goals</p>
                     {goalsFetch?.map((goal) => (
-                        <div>
-                        <p>{goal.id} - {goal.name}</p>
+                        <div className='p-2 m-2 rounded border'>
+                        <p>{goal.name}</p>
                         <p className='text-sm'>{goal.description}</p>
                         </div>
                     ))}
