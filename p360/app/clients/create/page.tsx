@@ -1,11 +1,17 @@
 import { create } from './actions'
 
+/**
+ * Renders a form for creating a new client.
+ *
+ * The form includes fields for first name, last name, date of birth, email, phone number, and address.
+ * When the "Create" button is clicked, the form is submitted to the `create` action.
+ */
 export default function Create() {
 
 
     return (
         <div className='flex flex-col flex-1 gap-2 justify-center px-8 w-full sm:max-w-md'>
-            <p className="text-3xl">Add Client</p>
+            <p className="text-3xl font-bold">Add Client</p>
             <div className='w-full bg-gradient-to-r from-transparent to-transparent via-foreground/10 p-[1px] my-8'></div>
 
             <form className='flex flex-col flex-1' action="">
