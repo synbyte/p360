@@ -1,4 +1,5 @@
 import { createClient } from '@/utils/supabase/server'
+import Link from 'next/link';
 
 /**
  * Renders the client details page for the specified client ID.
@@ -32,6 +33,7 @@ export default async function Page({ params }: { params: { id: string } }) {
                     <p className='text-sm'>{client.phone}</p>
                     <p className='text-sm'>{client.email}</p>
                    </div>
+                   <Link href={`/clients/${params.id}/goals`}>
                    <div className='flex-col p-3 m-2 border'>
                    <p className='text-xl'>Goals:</p>
                     {goalsFetch?.map((goal) => (
@@ -41,6 +43,7 @@ export default async function Page({ params }: { params: { id: string } }) {
                         </div>
                     ))}
                    </div>
+                   </Link>
                 </div>
             )}
         </div>

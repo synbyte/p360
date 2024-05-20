@@ -16,18 +16,18 @@ export default function Create() {
 
             <form className='flex flex-col flex-1' action="">
                 <label htmlFor="first_name">First name:</label>
-                <input className="px-4 py-2 mb-6 rounded-md border bg-inherit" type="text" name="first_name" id="first_name" />
+                <input className="px-4 py-2 mb-5 rounded-md border bg-inherit" type="text" name="first_name" id="first_name" />
                 <label htmlFor="last_name">Last name:</label>
-                <input className="px-4 py-2 mb-6 rounded-md border bg-inherit" type="text" name="last_name" id="last_name" />
+                <input className="px-4 py-2 mb-5 rounded-md border bg-inherit" type="text" name="last_name" id="last_name" />
                 <label htmlFor="dob">Birthday:</label>
-                <input className="px-4 py-2 mb-6 rounded-md border bg-inherit" type="date" name="dob" id="dob" />
+                <input className="px-4 py-2 mb-5 rounded-md border bg-inherit" type="date" name="dob" id="dob" />
                 <label htmlFor="email">Email:</label>
-                <input className="px-4 py-2 mb-6 rounded-md border bg-inherit" type="email" name="email" id="email" />
+                <input className="px-4 py-2 mb-5 rounded-md border bg-inherit" type="email" name="email" id="email" />
                 <label htmlFor="phone">Phone number:</label>
-                <input className="px-4 py-2 mb-6 rounded-md border bg-inherit" type="tel" name="phone" id="phone" />
+                <input className="px-4 py-2 mb-5 rounded-md border bg-inherit" type="tel" name="phone" id="phone" />
                 <label htmlFor="address">Address:</label>
-                <input className="px-4 py-2 mb-6 rounded-md border bg-inherit" type="text" name="address" id="address" />
-                <button type="submit" formAction={create}>Create</button>
+                <input className="px-4 py-2 mb-5 rounded-md border bg-inherit" type="text" name="address" id="address" />
+                <button className='p-3 mb-3 rounded border' type="submit" formAction={create}>Create</button>
             </form>
         </div>
 

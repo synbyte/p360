@@ -24,7 +24,7 @@ export default async function Clients() {
     return (
         <div className='container flex flex-col flex-1 items-center'>
             <p className="text-3xl font-bold">Clients</p>
-            <Link className='px-4 py-3 rounded border' href='/clients/create'>New Client</Link>
+            <Link className='px-4 py-1 rounded border' href='/clients/create'>New Client</Link>
             <div className='w-full bg-gradient-to-r from-transparent to-transparent via-foreground/10 p-[1px] my-8'></div>
 
             <div className='grid grid-cols-2 gap-3'>
