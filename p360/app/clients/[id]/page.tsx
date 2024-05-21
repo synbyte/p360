@@ -41,10 +41,17 @@ export default async function Page({ params }: { params: { id: string } }) {
                    <div className='flex-col p-3 m-2 rounded-lg border'>
                    <p className='mb-4 text-xl'>Goals</p>
                     {goalsFetch?.map((goal) => (
-                        <div className='p-2 m-2 rounded border'>
+                         
+                        <div className='p-2 m-2 rounded border hover:ring-1'>
                         <p>{goal.name}</p>
                         <p className='text-sm'>{goal.description}</p>
+                        <Link
+                         href={`/clients/${params.id}/goals/${goal.id}/milestones`}
+                         key={goal.id}
+                     ><button  className='px-2 my-1 rounded border hover:ring-1'>Open</button></Link>
                         </div>
+                        
+                        
                     ))}
                    </div>
                    </Link>
