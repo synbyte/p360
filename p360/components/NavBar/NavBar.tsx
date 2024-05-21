@@ -1,4 +1,5 @@
 import Links from './Links';
+import Link from 'next/link'
 import React from 'react';
 import { createClient } from '@/utils/supabase/server';
 import NextBreadcrumb from '../Breadcrumb';
@@ -11,7 +12,10 @@ export default async function NavBar({auth}:{auth:React.ReactNode}) {
     return (
         <nav className="flex justify-center mb-11 w-full h-16 border-b shadow-sm border-b-foreground/10 animate-down">
             <div className="flex justify-between items-center p-3 w-full max-w-4xl text-sm">
-                {user ? <Links/> :null }
+                {user ? <Links/> : <div className="flex gap-3 p-1 rounded-xl border">
+                    <Link className='p-1 hover:text-gray-400' href='/'>Home</Link>
+                    
+                </div> }
                 
                 {auth}
             </div>
