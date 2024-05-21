@@ -27,7 +27,7 @@ export default async function Page({ params }: { params: { id: string } }) {
             {client && (
                 <div className='flex flex-row gap-4'>
                     <div className='flex-col p-3 m-2 rounded-lg border'>
-                    <p className='mb-4 text-xl  heading'>{client.first_name} {client.last_name}</p>
+                    <p className='mb-4 text-xl heading'>{client.first_name} {client.last_name}</p>
                     <p className='text-sm underline'>D.o.b</p>
                     <p className='mb-1'>{client.dob}</p>
                     <p className='text-sm underline'>Address</p>

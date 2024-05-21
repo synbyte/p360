@@ -10,10 +10,10 @@ const { data: goals, error } = await supabase
 .select(`
   id,
   milestones (
-    parent_goal
+    id
   )
 `)
-console.log(goals)
+console.log(goals[4].milestones)
 
     return(
         <ul className="divide-y">
