@@ -1,5 +1,5 @@
 import { Poppins } from 'next/font/google';
-import "./globals.css";
+
 import NavBar from "@/components/NavBar/NavBar";
 import AuthButton from '@/components/NavBar/AuthButton';
 import NextBreadcrumb from '@/components/Breadcrumb';
@@ -15,22 +15,22 @@ export const metadata = {
   description: "The fastest way to build apps with Next.js and Supabase",
 };
 
-export default function RootLayout({
+export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   
-  return (
-    <html lang="en" className={poppins.className}>
-      <body className="bg-background text-foreground">
-          <NavBar auth={<AuthButton/>}/>
-        <main className="flex flex-col items-center min-h-screen">
+  return (<>
+    
+    <main>
           
+        
           
+        
           {children}
+        
         </main>
-      </body>
-    </html>
+        </>
   );
 }
