@@ -2,8 +2,9 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { createClient } from '@/utils/supabase/client';
+import { User } from '@supabase/supabase-js';
 
-export default function Links({user} : {user: any}) {
+export default function Links({user} : {user: User}) {
     
     const supabase = createClient();
     

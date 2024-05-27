@@ -34,7 +34,7 @@ export default async function Clients() {
 
                         <p className='text-sm'>{client.dob}</p>
 
-                        <Link href={`/clients/${client.id}`}><button className="px-3 py-1 mt-3 rounded border hover:ring-1">Details</button></Link>
+                        <Link href={`/clients/${client.id}`}><button className="px-3 py-1 mt-3 rounded ring-2 hover:bg-btn-background-hover hover:ring-2">Details</button></Link>
                     </div>
                 ))}
             </div>

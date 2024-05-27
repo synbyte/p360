@@ -21,7 +21,7 @@ export default async function AuthButton() {
     <div className="flex gap-4 items-center">
       Logged in as {user.email}!
       <form action={signOut}>
-        <button className="px-4 py-2 no-underline rounded-md bg-btn-background hover:bg-btn-background-hover">
+        <button className="px-3 py-1 text-xs rounded ring-2 no-unerline hover:bg-btn-background-hover">
           Logout
         </button>
       </form>
@@ -30,7 +30,7 @@ export default async function AuthButton() {
     <div className="flex justify-end w-full">
     <Link
       href="/login"
-      className="flex px-3 py-2 no-underline rounded-md bg-btn-background hover:bg-btn-background-hover"
+      className="flex px-3 py-2 no-underline rounded-md border bg-btn-background hover:bg-btn-background-hover"
     >
       Login
     </Link>

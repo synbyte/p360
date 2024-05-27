@@ -37,9 +37,9 @@ export default async function Page({ params }: { params: { id: string } }) {
                     <p className='text-sm underline'>Email</p>
                     <p className=''>{client.email}</p>
                    </div>
-                   <Link href={`/clients/${params.id}/goals`}>
+                   
                    <div className='flex-col p-3 m-2 rounded-lg border'>
-                   <p className='mb-4 text-xl'>Goals</p>
+                   <div className='flex flex-row justify-between'><p className='mb-4 text-xl'>Goals</p><Link href={`/clients/${params.id}/goals`}><button className='px-2 rounded ring-2 hover:ring-2 hover:bg-btn-background-hover'>Open Goals</button></Link></div>
                     {goalsFetch?.map((goal) => (
                          
                         <div className='p-2 m-2 rounded border hover:ring-1'>
@@ -48,13 +48,13 @@ export default async function Page({ params }: { params: { id: string } }) {
                         <Link
                          href={`/clients/${params.id}/goals/${goal.id}/milestones`}
                          key={goal.id}
-                     ><button  className='px-2 my-1 rounded border hover:ring-1'>Open</button></Link>
+                     ><button  className='px-2 my-1 rounded ring-2 hover:bg-btn-background-hover hover:ring-2'>Open</button></Link>
                         </div>
                         
                         
                     ))}
                    </div>
-                   </Link>
+                   
                 </div>
             )}
         </div>
