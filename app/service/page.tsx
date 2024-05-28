@@ -1,7 +1,7 @@
 export default async function Page() {
     return (
         <div className="container flex flex-col items-center px-3">
-            <p className="text-3xl font-bold">Welcome, please sign in</p>
+            <p className="text-3xl font-bold">Welcome to Pier360!</p>
             
             <div className='w-full bg-gradient-to-r from-transparent to-transparent via-foreground/10 p-[1px] my-8'></div>
             <form className="">
