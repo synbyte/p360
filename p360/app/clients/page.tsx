@@ -29,12 +29,12 @@ export default async function Clients() {
 
             <div className='grid grid-cols-2 gap-3'>
                 {clients?.map((client) => (
-                    <div className='p-3 space-y-1 text-center rounded-lg border hover:ring-1' key={client.id}>
+                    <div className='p-3 space-y-1 text-center bg-white rounded-lg border shadow-sm transition-all hover:ring-2' key={client.id}>
                         <p className="text-xl">{client.first_name} {client.last_name}</p>
 
                         <p className='text-sm'>{client.dob}</p>
 
-                        <Link href={`/clients/${client.id}`}><button className="px-3 py-1 mt-3 rounded ring-2 hover:bg-btn-background-hover hover:ring-2">Details</button></Link>
+                        <Link href={`/clients/${client.id}`}><button className="px-3 py-1 mt-3 rounded ring-2 transition-all hover:bg-btn-background-hover hover:ring-2">Details</button></Link>
                     </div>
                 ))}
             </div>

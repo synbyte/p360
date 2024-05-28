@@ -16,7 +16,7 @@ export default async function Page({ params }: { params: { id: string } }) {
         .from("milestones")
         .select("parent_goal")
        
-        console.log(milestones)
+      
     return (
         <div className="flex flex-col flex-1 items-center w-full">
             <p className="text-3xl font-bold">

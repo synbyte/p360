@@ -1,6 +1,8 @@
 import { createClient } from "@/utils/supabase/server";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import logoutIcon from "./logout-3-svgrepo-com.svg";
+import Image from "next/image";
 
 export default async function AuthButton() {
   const supabase = createClient();
@@ -22,7 +24,8 @@ export default async function AuthButton() {
       Logged in as {user.email}!
       <form action={signOut}>
         <button className="px-3 py-1 text-xs rounded ring-2 no-unerline hover:bg-btn-background-hover">
-          Logout
+          <div className='flex flex-row'><Image src={logoutIcon} alt="logout" width={20} height={20} /> <p className=''></p></div>
+          
         </button>
       </form>
     </div>
