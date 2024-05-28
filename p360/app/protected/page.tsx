@@ -25,7 +25,7 @@ export default async function ProtectedPage() {
         <Header />
         <main className="flex flex-col flex-1 gap-6">
           <h2 className="mb-4 text-4xl font-bold">Next steps</h2>
-          <FetchDataSteps />
+         
         </main>
       </div>
 
