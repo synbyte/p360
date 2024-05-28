@@ -4,9 +4,7 @@
 # List the start up tasks. Learn more: https://www.gitpod.io/docs/configure/workspaces/tasks
 tasks:
   - name: Startup
-    init: |
-      cd p360
-      npm install
+    init: npm install
     command: cd p360 && npm run dev
 
 # List the ports to expose. Learn more: https://www.gitpod.io/docs/configure/workspaces/ports
