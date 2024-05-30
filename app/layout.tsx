@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en" className={poppins.className}>
       <body className="bg-background text-foreground">
           <NavBar auth={<AuthButton/>}/>
-        <main className="flex flex-col items-center min-h-screen">
+        <main className="flex flex-col items-center pt-16 min-h-screen">
           
           
           {children}
