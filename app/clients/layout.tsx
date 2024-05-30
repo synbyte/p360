@@ -1,5 +1,5 @@
 import { Poppins } from 'next/font/google';
-
+import SideNav from '@/components/SideNav';
 import NavBar from "@/components/NavBar/NavBar";
 import AuthButton from '@/components/NavBar/AuthButton';
 import NextBreadcrumb from '@/components/Breadcrumb';
@@ -26,11 +26,9 @@ export default function DashboardLayout({
     <main>
           
         
-          <div className="flex flex-row justify-end my-6 w-screen h-full bg-green-100">
-            <div className='flex fixed left-0 top-16 px-5 w-1/5 h-full bg-red-100 border-r'>
-              hello
-            </div>
-            <div className='flex w-4/5 bg-blue-100'>
+          <div className="flex flex-row justify-end my-6 w-screen h-full">
+            <SideNav/>
+            <div className='flex w-4/5'>
               {children}
             </div>
           </div>

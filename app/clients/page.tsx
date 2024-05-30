@@ -22,12 +22,12 @@ export default async function Clients() {
         return redirect("/login");
     }
     return (
-        <div className='container flex flex-col flex-1 items-center'>
+        <div className='flex flex-col flex-1 items-center'>
             <p className="text-3xl font-bold">Clients</p>
             <Link className='px-4 py-1 rounded border' href='/clients/create'>New Client</Link>
             <div className='w-full bg-gradient-to-r from-transparent to-transparent via-foreground/10 p-[1px] my-8'></div>
 
-            <div className='grid grid-cols-2 gap-3'>
+            <div className='grid grid-cols-3 gap-3'>
                 {clients?.map((client) => (
                     <div className='p-3 space-y-1 text-center bg-white rounded-lg border shadow-sm transition-all hover:ring-2' key={client.id}>
                         <p className="text-xl">{client.first_name} {client.last_name}</p>
