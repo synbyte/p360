@@ -26,9 +26,11 @@ export default function DashboardLayout({
     <main>
           
         
-          <div className="flex flex-row justify-end my-6 w-screen h-full">
+          <div className="flex flex-row justify-end w-screen h-full my-6">
+            <div className='w-96'>
             <SideNav/>
-            <div className='flex w-4/5'>
+            </div>
+            <div className='flex w-full'>
               {children}
             </div>
           </div>
