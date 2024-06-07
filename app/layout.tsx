@@ -1,10 +1,9 @@
-import { Poppins } from 'next/font/google';
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar/NavBar";
-import AuthButton from '@/components/NavBar/AuthButton';
-import NextBreadcrumb from '@/components/Breadcrumb';
+import AuthButton from "@/components/NavBar/AuthButton";
 
-const poppins = Poppins({subsets:['latin'], weight:'400'})
+const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : "http://localhost:3000";
@@ -20,14 +19,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  
   return (
     <html lang="en" className={poppins.className}>
       <body className="bg-background text-foreground">
-          <NavBar auth={<AuthButton/>}/>
-        <main className="flex flex-col items-center pt-16 min-h-screen">
-          
-          
+        <NavBar auth={<AuthButton />} />
+        <main className="flex flex-col items-center pt-24 min-h-screen">
           {children}
         </main>
       </body>

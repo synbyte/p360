@@ -1,10 +1,10 @@
-import { Poppins } from 'next/font/google';
-import SideNav from '@/components/SideNav';
+import { Poppins } from "next/font/google";
+import SideNav from "@/components/SideNav";
 import NavBar from "@/components/NavBar/NavBar";
-import AuthButton from '@/components/NavBar/AuthButton';
-import NextBreadcrumb from '@/components/Breadcrumb';
+import AuthButton from "@/components/NavBar/AuthButton";
+import NextBreadcrumb from "@/components/Breadcrumb";
 
-const poppins = Poppins({subsets:['latin'], weight:'400'})
+const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : "http://localhost:3000";
@@ -20,19 +20,16 @@ export default function DashboardLayout({
 }: {
   children: React.ReactNode;
 }) {
-  
-  return (<>
-    
-    <main>
-          
-        
-          <div className="flex flex-row justify-end my-6 w-screen h-full">
-            <SideNav/>
-            <div className='flex w-4/5'>
-              {children}
-            </div>
+  return (
+    <>
+      <main>
+        <div className="flex flex-row justify-end w-screen h-full my-6">
+          <div className="w-1/5 bg-red-300">
+            <SideNav />
           </div>
-        </main>
-        </>
+          <div className="flex w-4/5">{children}</div>
+        </div>
+      </main>
+    </>
   );
 }
