@@ -48,7 +48,7 @@ export default function ProfileForm() {
   }
 
   return (
-    <Card>
+    <Card className=''>
         <CardHeader>
             <CardTitle>Welcome to Pier360</CardTitle> 
         </CardHeader>
@@ -78,7 +78,7 @@ export default function ProfileForm() {
           name="lname"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className='text-xs font-bold uppercase'>First name</FormLabel>
+              <FormLabel className='text-xs font-bold uppercase'>Last name</FormLabel>
               <FormControl>
                 <Input placeholder="Your name" {...field} />
               </FormControl>
@@ -94,7 +94,7 @@ export default function ProfileForm() {
           name="phone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className='text-xs font-bold uppercase'>First name</FormLabel>
+              <FormLabel className='text-xs font-bold uppercase'>Phone number</FormLabel>
               <FormControl>
                 <Input placeholder="Your name" {...field} />
               </FormControl>
